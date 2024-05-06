@@ -12,7 +12,10 @@ pipeline{
         }
         stage("build"){
             steps{
+                sh("pwd")
+                sh("ls -l")
                 dir("test-go-app"){
+                    sh("pwd")
                     sh("ls -l")
                     sh("go build helloWorld.go")
                 }
