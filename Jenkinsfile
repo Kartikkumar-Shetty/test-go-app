@@ -12,7 +12,7 @@ pipeline{
         }
         stage("build"){
             steps{
-                dir("mycode/test-go-app"){
+                dir("test-go-app"){
                     sh("ls -l")
                     sh("go build helloWorld.go")
                 }
