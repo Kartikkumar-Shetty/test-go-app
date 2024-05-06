@@ -14,11 +14,8 @@ pipeline{
             steps{
                 sh("pwd")
                 sh("ls -l")
-                dir("test-go-app"){
-                    sh("pwd")
-                    sh("ls -l")
-                    sh("go build helloWorld.go")
-                }
+                sh("go build helloWorld.go")
+                
             }
         }
     }
