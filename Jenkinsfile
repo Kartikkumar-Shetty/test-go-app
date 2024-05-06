@@ -10,15 +10,6 @@ pipeline{
                 deleteDir()
             }
         }
-        stage("clone"){
-            steps{
-                echo 'This is the start of the jenkins job'
-                echo 'cloning my repo'
-                dir("mycode"){
-                    sh "git clone https://github.com/Kartikkumar-Shetty/test-go-app"
-                }
-            }
-        }
         stage("build"){
             steps{
                 dir("mycode/test-go-app"){
